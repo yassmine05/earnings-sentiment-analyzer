@@ -1,0 +1,12 @@
+{
+  "model": "ProsusAI/finbert",
+  "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+  "max_length": 128,
+  "batch_size": 32,
+  "device": "cpu",
+  "quantized_int8": false,
+  "sentences_scored_this_run": 104187,
+  "seconds": 4721.5,
+  "sentences_per_second": 22.07,
+  "torch": "2.15.0+cpu"
+}

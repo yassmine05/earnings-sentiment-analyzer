@@ -1,0 +1,15 @@
+{
+  "distinct_sentences": 112172,
+  "scored": 112172,
+  "missing": 0,
+  "duplicate_scores": 0,
+  "scores_not_in_input": 0,
+  "invalid_probabilities": 0,
+  "truncated_at_max_length": 2541,
+  "model": "ProsusAI/finbert",
+  "revision": "0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+  "max_length": 128,
+  "batch_size": 32,
+  "checked_at": "2026-11-15T20:46:07",
+  "complete": true
+}
