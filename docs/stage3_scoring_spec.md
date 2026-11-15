@@ -1,4 +1,6 @@
-# Stage 3: scoring specification (frozen, version 1.0)
+# Stage 3: scoring specification (frozen, version 1.1)
+
+Scoring rules (sections 1 to 6) are unchanged since version 1.0. Version 1.1 changes the Stage 4 design in section 7 only.
 
 This document fixes how every earnings release is turned into a sentiment score. It was written and
 committed **before any score was joined to a return**. The rules were developed by looking at release
@@ -146,16 +148,51 @@ tone surprise = document score - mean(document scores of the same firm's previou
 
 Columns: `fb_tone_surprise`, `lm_tone_surprise` (and the same for the `with_sh` version).
 
-## 7. What Stage 4 will use (fixed now)
+## 7. Stage 4 design (fixed now, before any score is joined to a return)
 
-| Item | Choice |
-|---|---|
-| Headline regressors | `fb_tone` and `lm_tone` from the `main` version |
-| Second specification | `fb_tone_surprise` and `lm_tone_surprise` |
-| Standardisation | each score is divided by its full-sample standard deviation after subtracting the full-sample mean. This is a change of units only and does not alter any t-statistic |
-| Quintile breakpoints | from the previous calendar quarter's distribution of scores, never from the current or later quarters |
-| Robustness | `with_sh` version; `fb_tone_labels`; `lm_tone_per_word` |
-| Outcome families | reaction CAR[0,+1] (association test) and drift CAR[+1,+5] (prediction test), Holm correction within each family |
+### Outcomes
+
+| Family | Headline window | Other windows in the family | Role |
+|---|---|---|---|
+| Reaction | CAR[0,+1] | CAR[0,+2] to CAR[0,+5] | association test |
+| Drift | CAR[+1,+5] | AR[+1], CAR[+1,+2] to CAR[+1,+4] | prediction test |
+
+Holm correction is applied within each family. CARs are the market-model CARs of Stage 2.
+
+### Regressors
+
+`fb_tone` and `lm_tone` from the `main` version, each standardised by subtracting its full-sample mean
+and dividing by its full-sample standard deviation. This is a change of units only and does not alter
+any t-statistic. Each score is tested alone and then both together.
+
+### Specifications
+
+| | Specification | Fixed effects | Standard errors | Role |
+|---|---|---|---|---|
+| A | CAR on standardised tone | **firm** and **calendar quarter** | clustered by firm and by event date (two-way) | **headline** |
+| B | CAR on standardised tone | sector and calendar quarter (pooled across firms) | clustered by firm and by event date | secondary |
+| C | CAR on standardised tone surprise (`fb_tone_surprise`, `lm_tone_surprise`) | calendar quarter | clustered by firm and by event date | secondary |
+
+- The calendar quarter is the quarter of event day 0. The event date used for clustering is event day 0.
+- Specification A identifies the effect from changes in a firm's tone over time, so differences in house
+  style and in the amount of boilerplate between firms cannot drive the result.
+- Specification B also uses differences between firms.
+- Specification C uses the within-firm deviation from the previous four quarters and therefore has no
+  firm fixed effects; it covers 1,088 of the 1,316 events (section 6).
+- Controls for all three: log market capitalisation at the end of 2018 is absorbed by firm fixed effects
+  in A and is included in B and C; pre-event run-up CAR[-20,-1]; estimation-window volatility; and, for the
+  drift family only, the day-0 abnormal return. Earnings surprise is a secondary specification and cannot
+  block the main results.
+
+### Sorts
+
+Quintile sorts use breakpoints from the previous calendar quarter's distribution of scores, never from
+the current or later quarters.
+
+### Robustness
+
+`with_sh` version of the text; `fb_tone_labels`; `lm_tone_per_word`; Fama-French 4-factor and sector-ETF
+CARs; excluding market-hours events; excluding events with an earlier Item 2.02 filing in the same quarter.
 
 ## 8. Reproducibility
 
@@ -166,3 +203,7 @@ Columns: `fb_tone_surprise`, `lm_tone_surprise` (and the same for the `with_sh` 
 ## Change log
 
 - 1.0: first frozen version.
+- 1.1: Stage 4 design only (section 7). The headline regression now uses firm and calendar-quarter fixed
+  effects with standard errors clustered by firm and by event date. The pooled specification with sector
+  fixed effects and the tone-surprise specification are secondary. No scoring rule changed, so no score
+  changes. Committed before any score was joined to a return.
