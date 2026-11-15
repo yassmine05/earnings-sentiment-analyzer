@@ -1,0 +1,26 @@
+ticker,date,stock_ret_%,spy_ret_%,sector_etf_ret_%,trading_days_from_nearest_event,yahoo_split_record,verdict,explanation
+META,2018-07-26,-19.0,-0.2,-3.8,-129,,genuine,Reaction to the Q2 2018 results and guidance released after the close on 2018-07-25 (before the sample; inside early estimation windows)
+META,2022-02-03,-26.4,-2.4,-6.7,0,,genuine,Reaction to the Q4 2021 results released after the close the day before
+META,2022-04-28,17.6,2.5,4.0,0,,genuine,Reaction to the Q1 2022 results released after the close the day before
+META,2022-10-27,-24.6,-0.5,-4.7,0,,genuine,Reaction to the Q3 2022 results released after the close the day before
+META,2023-02-02,23.3,1.5,6.6,0,,genuine,Reaction to the Q4 2022 results and buyback released after the close the day before
+META,2024-02-02,20.3,1.1,4.0,0,,genuine,Reaction to the Q4 2023 results and first dividend released after the close the day before
+NKE,2021-06-25,15.5,0.4,0.6,0,,genuine,Reaction to the fiscal Q4 2021 results released after the close the day before
+NKE,2024-06-28,-20.0,-0.4,-1.1,0,,genuine,Reaction to the fiscal Q4 2024 results and lowered outlook released after the close the day before
+SBUX,2024-05-01,-15.9,-0.3,-0.6,0,,genuine,Reaction to the fiscal Q2 2024 results released after the close the day before
+SBUX,2024-08-13,24.5,1.6,2.5,9,,genuine,Chief executive change announced that morning; not an earnings date and no corporate action
+PM,2018-04-19,-15.6,-0.6,-2.9,-202,,genuine,Reaction to the Q1 2018 results released that morning (before the sample; inside early estimation windows)
+EOG,2020-11-09,16.6,1.3,14.3,1,,genuine,Market-wide rotation on the Pfizer vaccine announcement; the energy sector ETF rose 14.3% the same day
+SLB,2020-03-19,15.1,0.2,6.8,-20,,genuine,Oil-price rebound day during the March 2020 crash; the energy sector ETF rose 6.8%
+SLB,2020-11-09,19.9,1.3,14.3,16,,genuine,Market-wide rotation on the Pfizer vaccine announcement; the energy sector ETF rose 14.3% the same day
+ABBV,2019-06-25,-16.3,-1.0,-0.4,-22,,genuine,Announcement of the agreement to acquire Allergan; no corporate action in AbbVie shares that day
+BA,2020-03-25,24.3,1.5,5.3,-24,,genuine,Rally on expected federal aid for the aerospace industry during the March 2020 crash
+MMM,2024-07-26,23.0,1.1,1.7,0,,genuine,Reaction to the Q2 2024 results released that morning
+INTC,2020-07-24,-16.2,-0.6,-1.2,0,,genuine,Reaction to the Q2 2020 results and process delay released after the close the day before
+INTC,2024-08-02,-26.1,-1.9,-2.8,0,,genuine,Reaction to the Q2 2024 results and dividend suspension released after the close the day before
+INTC,2025-02-18,16.1,0.3,0.9,71,,genuine,Press reports of takeover or break-up interest; after the sample and outside every event window
+DD,2019-06-03,17.8,-0.3,3.1,21,0.4725,artifact,Corteva spin-off and 1-for-3 reverse split took effect this day; Yahoo records a combined 0.4725 adjustment and the 17.8% return cannot be verified from Yahoo data alone
+APD,2024-02-05,-15.6,-0.4,-2.5,0,,genuine,Reaction to the fiscal Q1 2024 results and lowered guidance released that morning
+SPG,2020-03-19,24.1,0.2,-1.6,31,,genuine,Rebound day during the March 2020 crash for mall REITs; no corporate action
+SPG,2020-06-05,15.5,2.6,3.7,17,,genuine,Reopening rally on the May 2020 jobs report; no corporate action
+SPG,2020-11-09,27.9,1.3,2.6,-1,,genuine,Market-wide rotation on the Pfizer vaccine announcement; also the day of the Q3 2020 results

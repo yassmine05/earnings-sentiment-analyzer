@@ -1,0 +1,166 @@
+sector,name,value_usd,cik,edgar_name,ticker_today,match_score,method
+Communication Services,"Facebook, Inc. Class",443146861,,,,0.0,
+Communication Services,"Alphabet, Inc. Class C",333207517,1652044.0,Alphabet Inc.,GOOGL,1.0,ticker_map_exact
+Communication Services,"Alphabet, Inc. Class A",326719284,1652044.0,Alphabet Inc.,GOOGL,1.0,ticker_map_exact
+Communication Services,"Netflix, Inc",130320977,1065280.0,NETFLIX INC,NFLX,1.0,ticker_map_exact
+Communication Services,"Verizon Communications, Inc",127972855,732712.0,VERIZON COMMUNICATIONS INC,VZ,1.0,ticker_map_exact
+Communication Services,Walt Disney Co,126974590,1744489.0,Walt Disney Co,DIS,1.0,ticker_map_exact
+Communication Services,"Activision Blizzard, Inc",126721068,718877.0,"Activision Blizzard, Inc.",,1.0,edgar_search:Activision Blizzard
+Communication Services,"AT&T, Inc",122705732,732717.0,AT&T INC.,T,1.0,ticker_map_exact
+Communication Services,Comcast Corp. Class A,121741961,1166691.0,COMCAST CORP,CMCSA,1.0,ticker_map_exact
+Communication Services,"Charter Communications, Inc. Class A",119657478,,,,0.0,
+Communication Services,"Electronic Arts, Inc",101819704,712515.0,ELECTRONIC ARTS INC.,,1.0,edgar_search:Electronic Arts
+Communication Services,"Twitter, Inc",88762858,1418091.0,"TWITTER, INC.",,1.0,edgar_search:Twitter
+Communication Services,"Twenty-First Century Fox, Inc. Class A",87383418,1308161.0,"TWENTY-FIRST CENTURY FOX, INC.",,1.0,edgar_search:Twenty-First Century Fox
+Communication Services,"Omnicom Group, Inc",70093243,29989.0,OMNICOM GROUP INC.,OMC,1.0,ticker_map_exact
+Communication Services,CBS Corp. Class B,62866999,,,,0.0,
+Consumer Discretionary,"Amazon.com, Inc",2622357012,1018724.0,AMAZON COM INC,AMZN,1.0,ticker_map_exact
+Consumer Discretionary,"Home Depot, Inc",1198332473,354950.0,"HOME DEPOT, INC.",HD,1.0,ticker_map_exact
+Consumer Discretionary,McDonald's Corp,845242789,,,,0.0,
+Consumer Discretionary,"NIKE, Inc. Class B",582786070,320187.0,"NIKE, Inc.",NKE,1.0,ticker_map_exact
+Consumer Discretionary,Starbucks Corp,493313338,829224.0,STARBUCKS CORP,SBUX,1.0,ticker_map_exact
+Consumer Discretionary,"Booking Holdings, Inc",492741301,1075531.0,Booking Holdings Inc.,BKNG,1.0,ticker_map_exact
+Consumer Discretionary,"Lowe's Cos., Inc",457909705,,,,0.0,
+Consumer Discretionary,"TJX Cos., Inc",341868272,,,,0.0,
+Consumer Discretionary,General Motors Co,271103051,1467858.0,General Motors Co,GM,1.0,ticker_map_exact
+Consumer Discretionary,Target Corp,212951034,,,,0.0,
+Consumer Discretionary,"Ross Stores, Inc",191805536,745732.0,"ROSS STORES, INC.",ROST,1.0,ticker_map_exact
+Consumer Discretionary,"Marriott International, Inc. Class A",189785243,905036.0,SODEXHO MARRIOTT SERVICES INC,,0.511,edgar_search:Marriott International
+Consumer Discretionary,Ford Motor Co,184551117,37996.0,FORD MOTOR CO,F,1.0,ticker_map_exact
+Consumer Discretionary,"Yum! Brands, Inc",177250899,1041061.0,YUM BRANDS INC,YUM,1.0,ticker_map_exact
+Consumer Discretionary,Dollar General Corp,175433511,29534.0,DOLLAR GENERAL CORP,DG,1.0,ticker_map_exact
+Consumer Staples,Procter & Gamble Co,1397096308,80424.0,PROCTER & GAMBLE Co,PG,1.0,ticker_map_exact
+Consumer Staples,Coca-Cola Co,1106547861,21344.0,COCA COLA CO,KO,1.0,ticker_map_exact
+Consumer Staples,"PepsiCo, Inc",951302844,77476.0,PEPSICO INC,PEP,1.0,ticker_map_exact
+Consumer Staples,"Walmart, Inc",808862902,104169.0,Walmart Inc.,WMT,1.0,ticker_map_exact
+Consumer Staples,Costco Wholesale Corp,447781673,909832.0,COSTCO WHOLESALE CORP /NEW,COST,0.889,edgar_search:Costco Wholesale
+Consumer Staples,"Altria Group, Inc",426302525,764180.0,"ALTRIA GROUP, INC.",MO,1.0,ticker_map_exact
+Consumer Staples,"Mondelez International, Inc. Class A",408871304,1103982.0,"Mondelez International, Inc.",MDLZ,1.0,ticker_map_exact
+Consumer Staples,"Walgreens Boots Alliance, Inc",385913491,1618921.0,"Walgreens Boots Alliance, Inc.",,1.0,edgar_search:Walgreens Boots Alliance
+Consumer Staples,"Philip Morris International, Inc",368265518,1413329.0,Philip Morris International Inc.,PM,1.0,ticker_map_exact
+Consumer Staples,Colgate-Palmolive Co,362655300,21665.0,COLGATE PALMOLIVE CO,CL,1.0,ticker_map_exact
+Consumer Staples,Kimberly-Clark Corp,277556359,55785.0,KIMBERLY CLARK CORP,KMB,1.0,ticker_map_exact
+Consumer Staples,Sysco Corp,210775457,96021.0,SYSCO CORP,SYY,1.0,ticker_map_exact
+Consumer Staples,"Estee Lauder Cos., Inc. Class A",201235818,1001250.0,ESTEE LAUDER COMPANIES INC,EL,0.857,edgar_search:Estee Lauder
+Consumer Staples,Kraft Heinz Co,188283774,1637459.0,Kraft Heinz Co,KHC,1.0,ticker_map_exact
+Consumer Staples,"Constellation Brands, Inc. Class A",187942936,16918.0,"CONSTELLATION BRANDS, INC.",STZ,1.0,ticker_map_exact
+Energy,Exxon Mobil Corp,2984930512,34088.0,EXXON MOBIL CORP,,1.0,edgar_search:Exxon Mobil
+Energy,Chevron Corp,2611461848,93410.0,CHEVRON CORP,CVX,1.0,ticker_map_exact
+Energy,ConocoPhillips,901756640,1163165.0,CONOCOPHILLIPS,COP,1.0,ticker_map_exact
+Energy,"Schlumberger, Ltd",597303173,87347.0,SLB LIMITED/NV,SLB,0.4,edgar_search:Schlumberger
+Energy,Occidental Petroleum Corp,593335724,797468.0,OCCIDENTAL PETROLEUM CORP /DE/,OXY,0.93,edgar_search:Occidental Petroleum
+Energy,"EOG Resources, Inc",564061983,821189.0,EOG RESOURCES INC,EOG,1.0,ticker_map_exact
+Energy,Marathon Petroleum Corp,521941267,1510295.0,Marathon Petroleum Corp,MPC,1.0,ticker_map_exact
+Energy,Phillips 66,467922002,1534701.0,Phillips 66,PSX,1.0,ticker_map_exact
+Energy,Valero Energy Corp,407267778,,,,0.0,
+Energy,"Kinder Morgan, Inc",373741705,1506307.0,"KINDER MORGAN, INC.",KMI,1.0,ticker_map_exact
+Energy,"Williams Cos., Inc",341743005,,,,0.0,
+Energy,Halliburton Co,298118808,45012.0,HALLIBURTON CO,HAL,1.0,ticker_map_exact
+Energy,Pioneer Natural Resources Co,287036613,1038357.0,PIONEER NATURAL RESOURCES CO,,1.0,edgar_search:Pioneer Natural Resources
+Energy,"ONEOK, Inc",284138843,,,,0.0,
+Energy,Anadarko Petroleum Corp,283045200,773910.0,ANADARKO PETROLEUM CORP,,1.0,edgar_search:Anadarko Petroleum
+Financials,"Berkshire Hathaway, Inc. Class B",3228767557,1067983.0,BERKSHIRE HATHAWAY INC,BRK-B,1.0,ticker_map_exact
+Financials,JPMorgan Chase & Co,2638759972,19617.0,JPMORGAN CHASE & CO,JPM,1.0,ticker_map_exact
+Financials,Bank of America Corp,1828073558,,,,0.0,
+Financials,Wells Fargo & Co,1586854748,,,,0.0,
+Financials,"Citigroup, Inc",1033451754,831001.0,CITIGROUP INC,C,1.0,ticker_map_exact
+Financials,US Bancorp,564321377,,,,0.0,
+Financials,"CME Group, Inc",547092465,1156375.0,CME GROUP INC.,CME,1.0,ticker_map_exact
+Financials,American Express Co,542755988,4962.0,AMERICAN EXPRESS CO,AXP,1.0,ticker_map_exact
+Financials,"Chubb, Ltd",483873531,896159.0,Chubb Ltd,CB,1.0,ticker_map_exact
+Financials,"Goldman Sachs Group, Inc",469731069,886982.0,GOLDMAN SACHS GROUP INC,GS,1.0,ticker_map_exact
+Financials,"PNC Financial Services Group, Inc",438501702,713676.0,"PNC FINANCIAL SERVICES GROUP, INC.",PNC,1.0,ticker_map_exact
+Financials,Morgan Stanley,421347228,895421.0,MORGAN STANLEY,MS,1.0,ticker_map_exact
+Financials,Charles Schwab Corp,405736555,,,,0.0,
+Financials,"BlackRock, Inc",387760086,2012383.0,"BlackRock, Inc.",BLK,1.0,ticker_map_exact
+Financials,"Intercontinental Exchange, Inc",348767128,1571949.0,"Intercontinental Exchange, Inc.",ICE,1.0,ticker_map_exact
+Health Care,Johnson & Johnson,1899133224,200406.0,JOHNSON & JOHNSON,JNJ,1.0,ticker_map_exact
+Health Care,"Pfizer, Inc",1384193444,78003.0,PFIZER INC,PFE,1.0,ticker_map_exact
+Health Care,"UnitedHealth Group, Inc",1315053411,731766.0,UNITEDHEALTH GROUP INC,UNH,1.0,ticker_map_exact
+Health Care,"Merck & Co., Inc",1089880988,310158.0,"Merck & Co., Inc.",MRK,1.0,ticker_map_exact
+Health Care,"AbbVie, Inc",760838170,1551152.0,AbbVie Inc.,ABBV,1.0,ticker_map_exact
+Health Care,Abbott Laboratories,697071334,1800.0,ABBOTT LABORATORIES,ABT,1.0,ticker_map_exact
+Health Care,"Amgen, Inc",680486311,318154.0,AMGEN INC,AMGN,1.0,ticker_map_exact
+Health Care,Medtronic PLC,670266048,1613103.0,Medtronic plc,MDT,1.0,ticker_map_exact
+Health Care,Eli Lilly & Co,598507543,59478.0,ELI LILLY & Co,LLY,1.0,ticker_map_exact
+Health Care,"Thermo Fisher Scientific, Inc",494364419,97745.0,THERMO FISHER SCIENTIFIC INC.,TMO,1.0,ticker_map_exact
+Health Care,Bristol-Myers Squibb Co,465542028,14272.0,BRISTOL MYERS SQUIBB CO,BMY,1.0,ticker_map_exact
+Health Care,CVS Health Corp,464929527,64803.0,CVS HEALTH Corp,CVS,1.0,ticker_map_exact
+Health Care,"Gilead Sciences, Inc",443979962,882095.0,"GILEAD SCIENCES, INC.",GILD,1.0,ticker_map_exact
+Health Care,Cigna Corp,399044471,1739940.0,Cigna Group,CI,1.0,ticker_map_exact
+Health Care,"Anthem, Inc",372696132,,,,0.0,
+Industrials,Boeing Co,851124585,12927.0,BOEING CO,BA,1.0,ticker_map_exact
+Industrials,3M Co,554501887,66740.0,3M CO,MMM,1.0,ticker_map_exact
+Industrials,Union Pacific Corp,509073997,100885.0,UNION PACIFIC CORP,UNP,1.0,ticker_map_exact
+Industrials,"Honeywell International, Inc",488892884,773840.0,HONEYWELL INTERNATIONAL INC,HON,1.0,ticker_map_exact
+Industrials,United Technologies Corp,432031739,101829.0,RTX Corp,RTX,0.091,edgar_search:United Technologies
+Industrials,"Caterpillar, Inc",374763358,18230.0,CATERPILLAR INC,CAT,1.0,ticker_map_exact
+Industrials,"United Parcel Service, Inc. Class B",338982095,1090727.0,UNITED PARCEL SERVICE INC,UPS,1.0,ticker_map_exact
+Industrials,General Electric Co,329167317,40545.0,GENERAL ELECTRIC CO,GE,1.0,ticker_map_exact
+Industrials,Lockheed Martin Corp,323884821,936468.0,LOCKHEED MARTIN CORP,LMT,1.0,ticker_map_exact
+Industrials,CSX Corp,249008839,277948.0,CSX CORP,CSX,1.0,ticker_map_exact
+Industrials,Deere & Co,239879382,315189.0,DEERE & CO,DE,1.0,ticker_map_exact
+Industrials,General Dynamics Corp,218782869,40533.0,GENERAL DYNAMICS CORP,GD,1.0,ticker_map_exact
+Industrials,Raytheon Co,218190980,,,,0.0,
+Industrials,Northrop Grumman Corp,212712548,,,,0.0,
+Industrials,Norfolk Southern Corp,203405056,702165.0,NORFOLK SOUTHERN CORP,NSC,1.0,ticker_map_exact
+Information Technology,Microsoft Corp,3199358813,789019.0,MICROSOFT CORP,MSFT,1.0,ticker_map_exact
+Information Technology,"Apple, Inc",2898134463,320193.0,Apple Inc.,AAPL,1.0,ticker_map_exact
+Information Technology,"Visa, Inc. Class A",944917865,1403161.0,VISA INC.,V,1.0,ticker_map_exact
+Information Technology,Intel Corp,872919822,50863.0,INTEL CORP,INTC,1.0,ticker_map_exact
+Information Technology,"Cisco Systems, Inc",793942089,858877.0,"CISCO SYSTEMS, INC.",CSCO,1.0,ticker_map_exact
+Information Technology,"Mastercard, Inc. Class A",698580948,1141391.0,Mastercard Inc,MA,1.0,ticker_map_exact
+Information Technology,Oracle Corp,469289326,1341439.0,ORACLE CORP,ORCL,1.0,ticker_map_exact
+Information Technology,"Adobe, Inc",450075295,796343.0,ADOBE INC.,ADBE,1.0,ticker_map_exact
+Information Technology,"Broadcom, Inc",428467140,1730168.0,Broadcom Inc.,AVGO,1.0,ticker_map_exact
+Information Technology,"salesforce.com, Inc",427037533,1108524.0,"Salesforce, Inc.",CRM,0.833,edgar_search:salesforce.com
+Information Technology,International Business Machines Corp,421005035,51143.0,INTERNATIONAL BUSINESS MACHINES CORP,IBM,1.0,ticker_map_exact
+Information Technology,"PayPal Holdings, Inc",403832218,1633917.0,"PayPal Holdings, Inc.",PYPL,1.0,ticker_map_exact
+Information Technology,"Texas Instruments, Inc",369933858,97476.0,TEXAS INSTRUMENTS INC,TXN,1.0,ticker_map_exact
+Information Technology,Accenture PLC Class A,366336224,1467373.0,Accenture plc,ACN,1.0,ticker_map_exact
+Information Technology,NVIDIA Corp,331895018,1045810.0,NVIDIA CORP,NVDA,1.0,ticker_map_exact
+Materials,"DowDuPont, Inc",774161666,1666700.0,"DuPont de Nemours, Inc.",DD,0.462,edgar_search:DowDuPont
+Materials,Linde PLC,542543434,1707925.0,LINDE PLC,LIN,1.0,ticker_map_exact
+Materials,"Ecolab, Inc",236344832,31462.0,ECOLAB INC.,ECL,1.0,ticker_map_exact
+Materials,"Air Products & Chemicals, Inc",221690537,2969.0,"Air Products & Chemicals, Inc.",APD,1.0,ticker_map_exact
+Materials,Sherwin-Williams Co,164545366,89800.0,SHERWIN WILLIAMS CO,SHW,1.0,ticker_map_exact
+Materials,LyondellBasell Industries NV Class A,163048319,1489393.0,LyondellBasell Industries N.V.,LYB,0.926,edgar_search:LyondellBasell Industries
+Materials,"PPG Industries, Inc",159130502,79879.0,PPG INDUSTRIES INC,PPG,1.0,ticker_map_exact
+Materials,Newmont Mining Corp,119762840,,,,0.0,
+Materials,International Paper Co,106075807,51434.0,INTERNATIONAL PAPER CO /NEW/,IP,0.905,edgar_search:International Paper
+Materials,Nucor Corp,105541788,73309.0,NUCOR CORP,NUE,1.0,ticker_map_exact
+Materials,Ball Corp,101201842,9389.0,BALL Corp,BALL,1.0,ticker_map_exact
+Materials,"Freeport-McMoRan, Inc",96940672,831259.0,FREEPORT-MCMORAN INC,FCX,1.0,ticker_map_exact
+Materials,"International Flavors & Fragrances, Inc",88252583,51253.0,INTERNATIONAL FLAVORS & FRAGRANCES INC,IFF,1.0,ticker_map_exact
+Materials,Vulcan Materials Co,84659052,1396009.0,Vulcan Materials CO,VMC,1.0,ticker_map_exact
+Materials,Celanese Corp. Series A,75930721,,,,0.0,
+Real Estate,American Tower Corp. REIT,286569727,1053507.0,AMERICAN TOWER CORP /MA/,AMT,0.903,edgar_search:American Tower
+Real Estate,"Simon Property Group, Inc. REIT",213679248,1063761.0,SIMON PROPERTY GROUP INC.,SPG,1.0,ticker_map_exact
+Real Estate,Crown Castle International Corp. REIT,185331579,1051470.0,CROWN CASTLE INC.,CCI,0.632,edgar_search:Crown Castle
+Real Estate,"Prologis, Inc. REIT",152024906,1045609.0,"Prologis, Inc.",PLD,1.0,ticker_map_exact
+Real Estate,Public Storage REIT,124836570,1393311.0,Public Storage,PSA,1.0,ticker_map_exact
+Real Estate,"Equinix, Inc. REIT",116518260,1101239.0,EQUINIX INC,EQIX,1.0,ticker_map_exact
+Real Estate,"Welltower, Inc. REIT",107191390,766704.0,WELLTOWER INC.,WELL,1.0,ticker_map_exact
+Real Estate,Equity Residential REIT,100017692,906107.0,VIVMARK RESIDENTIAL,VMRK,0.703,edgar_search:Equity Residential
+Real Estate,"AvalonBay Communities, Inc. REIT",98942378,915912.0,AVALONBAY COMMUNITIES INC,,1.0,edgar_search:AvalonBay
+Real Estate,"Digital Realty Trust, Inc. REIT",90394996,1297996.0,"DIGITAL REALTY TRUST, INC.",DLR,1.0,ticker_map_exact
+Real Estate,"Ventas, Inc. REIT",85892881,740260.0,"Ventas, Inc.",VTR,1.0,ticker_map_exact
+Real Estate,Realty Income Corp. REIT,76509189,726728.0,REALTY INCOME CORP,O,1.0,ticker_map_exact
+Real Estate,SBA Communications Corp. REIT,75451263,1034054.0,SBA COMMUNICATIONS CORP,SBAC,1.0,ticker_map_exact
+Real Estate,"Boston Properties, Inc. REIT",71493898,,,,0.0,
+Real Estate,Weyerhaeuser Co. REIT,67354988,106535.0,WEYERHAEUSER CO,WY,1.0,ticker_map_exact
+Utilities,"NextEra Energy, Inc",990260188,753308.0,NEXTERA ENERGY INC,NEE,1.0,ticker_map_exact
+Utilities,Duke Energy Corp,733324153,1326160.0,Duke Energy CORP,DUK,1.0,ticker_map_exact
+Utilities,"Dominion Energy, Inc",559176215,715957.0,"DOMINION ENERGY, INC",D,1.0,ticker_map_exact
+Utilities,Southern Co,538641380,92122.0,SOUTHERN CO,SO,1.0,ticker_map_exact
+Utilities,Exelon Corp,519848577,1109357.0,EXELON CORP,EXC,1.0,ticker_map_exact
+Utilities,"American Electric Power Co., Inc",439299074,4904.0,AMERICAN ELECTRIC POWER CO INC,AEP,1.0,ticker_map_exact
+Utilities,Sempra Energy,352916429,1032208.0,SEMPRA,SRE,0.632,edgar_search:Sempra Energy
+Utilities,"Public Service Enterprise Group, Inc",313592766,788784.0,PUBLIC SERVICE ENTERPRISE GROUP INC,PEG,1.0,ticker_map_exact
+Utilities,"Xcel Energy, Inc",301881527,72903.0,XCEL ENERGY INC,XEL,1.0,ticker_map_exact
+Utilities,"Consolidated Edison, Inc",283870901,1047862.0,CONSOLIDATED EDISON INC,ED,1.0,ticker_map_exact
+Utilities,"WEC Energy Group, Inc",260485198,783325.0,"WEC ENERGY GROUP, INC.",WEC,1.0,ticker_map_exact
+Utilities,Eversource Energy,245668893,72741.0,EVERSOURCE ENERGY,ES,1.0,ticker_map_exact
+Utilities,PPL Corp,243201123,922224.0,PPL Corp,PPL,1.0,ticker_map_exact
+Utilities,DTE Energy Co,239182903,936340.0,DTE ENERGY CO,DTE,1.0,ticker_map_exact
+Utilities,Edison International,220467828,827052.0,EDISON INTERNATIONAL,EIX,1.0,ticker_map_exact

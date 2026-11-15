@@ -1,0 +1,17 @@
+ticker,date,kind,exclude_from_estimation,explanation
+GOOGL,2022-07-18,stock split,False,20-for-1 split; an ordinary split is adjusted exactly
+AMZN,2022-06-06,stock split,False,20-for-1 split; an ordinary split is adjusted exactly
+WMT,2024-02-26,stock split,False,3-for-1 split; an ordinary split is adjusted exactly
+AAPL,2020-08-31,stock split,False,4-for-1 split; an ordinary split is adjusted exactly
+SHW,2021-04-01,stock split,False,3-for-1 split; an ordinary split is adjusted exactly
+NEE,2020-10-27,stock split,False,4-for-1 split; an ordinary split is adjusted exactly
+T,2022-04-11,spin-off,True,WarnerMedia spin-off (merged into Warner Bros. Discovery); Yahoo models it as a 1.324 split
+PFE,2020-11-17,spin-off,True,Upjohn spin-off (merged into Viatris); Yahoo models it as a 1.054 split
+MRK,2021-06-03,spin-off,True,Organon spin-off; Yahoo models it as a 1.048 split
+MMM,2024-04-01,spin-off,True,Solventum spin-off; Yahoo models it as a 1.196 split
+HON,2018-10-01,spin-off,True,Garrett Motion spin-off; Yahoo models it as a 1.011 split
+HON,2018-10-29,spin-off,True,Resideo spin-off; Yahoo models it as a 1.032 split
+RTX,2020-04-03,merger and spin-offs,True,Raytheon merger with Carrier and Otis spin-offs; Yahoo models it as a 1.589 split
+DD,2019-04-02,spin-off,True,Dow spin-off from DowDuPont; Yahoo models it as a 1.487 split
+DD,2019-06-03,spin-off and reverse split,True,Corteva spin-off with 1-for-3 reverse split; Yahoo models it as a 0.4725 split
+EXC,2022-02-02,spin-off,True,Constellation Energy spin-off; Yahoo models it as a 1.402 split

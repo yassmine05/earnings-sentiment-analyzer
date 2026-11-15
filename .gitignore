@@ -1,0 +1,27 @@
+# Secrets
+.env
+
+# Virtual environment
+.venv/
+
+# Raw and intermediate data: never committed (raw filing text, LM dictionary, prices)
+data/raw/
+data/interim/
+data/external/
+
+# Model caches
+.cache/
+hf_cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

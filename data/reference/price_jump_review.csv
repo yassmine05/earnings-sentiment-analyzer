@@ -1,0 +1,26 @@
+ticker,date,verdict,explanation
+META,2018-07-26,genuine,Reaction to the Q2 2018 results and guidance released after the close on 2018-07-25 (before the sample; inside early estimation windows)
+META,2022-02-03,genuine,Reaction to the Q4 2021 results released after the close the day before
+META,2022-04-28,genuine,Reaction to the Q1 2022 results released after the close the day before
+META,2022-10-27,genuine,Reaction to the Q3 2022 results released after the close the day before
+META,2023-02-02,genuine,Reaction to the Q4 2022 results and buyback released after the close the day before
+META,2024-02-02,genuine,Reaction to the Q4 2023 results and first dividend released after the close the day before
+NKE,2021-06-25,genuine,Reaction to the fiscal Q4 2021 results released after the close the day before
+NKE,2024-06-28,genuine,Reaction to the fiscal Q4 2024 results and lowered outlook released after the close the day before
+SBUX,2024-05-01,genuine,Reaction to the fiscal Q2 2024 results released after the close the day before
+SBUX,2024-08-13,genuine,Chief executive change announced that morning; not an earnings date and no corporate action
+PM,2018-04-19,genuine,Reaction to the Q1 2018 results released that morning (before the sample; inside early estimation windows)
+EOG,2020-11-09,genuine,Market-wide rotation on the Pfizer vaccine announcement; the energy sector ETF rose 14.3% the same day
+SLB,2020-03-19,genuine,Oil-price rebound day during the March 2020 crash; the energy sector ETF rose 6.8%
+SLB,2020-11-09,genuine,Market-wide rotation on the Pfizer vaccine announcement; the energy sector ETF rose 14.3% the same day
+ABBV,2019-06-25,genuine,Announcement of the agreement to acquire Allergan; no corporate action in AbbVie shares that day
+BA,2020-03-25,genuine,Rally on expected federal aid for the aerospace industry during the March 2020 crash
+MMM,2024-07-26,genuine,Reaction to the Q2 2024 results released that morning
+INTC,2020-07-24,genuine,Reaction to the Q2 2020 results and process delay released after the close the day before
+INTC,2024-08-02,genuine,Reaction to the Q2 2024 results and dividend suspension released after the close the day before
+INTC,2025-02-18,genuine,Press reports of takeover or break-up interest; after the sample and outside every event window
+DD,2019-06-03,artifact,Corteva spin-off and 1-for-3 reverse split took effect this day; Yahoo records a combined 0.4725 adjustment and the 17.8% return cannot be verified from Yahoo data alone
+APD,2024-02-05,genuine,Reaction to the fiscal Q1 2024 results and lowered guidance released that morning
+SPG,2020-03-19,genuine,Rebound day during the March 2020 crash for mall REITs; no corporate action
+SPG,2020-06-05,genuine,Reopening rally on the May 2020 jobs report; no corporate action
+SPG,2020-11-09,genuine,Market-wide rotation on the Pfizer vaccine announcement; also the day of the Q3 2020 results

@@ -1,0 +1,33 @@
+cik,share_class,shares_out,shares_date,price_from_nq_name,multiplier,source_accession,note
+1326801,Class A,2385533940,2019-01-28,"Facebook, Inc. Class",1,0001326801-19-000009,
+1326801,Class B,468455860,2019-01-28,"Facebook, Inc. Class",1,0001326801-19-000009,unlisted; priced at Class A
+1652044,Class A,299360029,2019-01-31,"Alphabet, Inc. Class A",1,0001652044-19-000004,
+1652044,Class B,46535019,2019-01-31,"Alphabet, Inc. Class A",1,0001652044-19-000004,unlisted; priced at Class A
+1652044,Class C,349291348,2019-01-31,"Alphabet, Inc. Class C",1,0001652044-19-000004,
+1166691,Class A,4516518147,2018-12-31,Comcast Corp. Class A,1,0001166691-19-000005,
+1166691,Class B,9444375,2018-12-31,Comcast Corp. Class A,1,0001166691-19-000005,unlisted; priced at Class A
+1091667,Class A,225353807,2018-12-31,"Charter Communications, Inc. Class A",1,0001091667-19-000029,one Class B share ignored
+1308161,Class A,1058408500,2019-02-01,"Twenty-First Century Fox, Inc. Class A",1,0001564590-19-002155,
+1308161,Class B,798520953,2019-02-01,"Twenty-First Century Fox, Inc. Class B",1,0001564590-19-002155,
+813828,Class A,25293972,2019-02-13,CBS Corp. Class B,1,0000813828-19-000006,priced at Class B
+813828,Class B,347676011,2019-02-13,CBS Corp. Class B,1,0000813828-19-000006,
+320187,Class A,315024752,2019-01-03,"NIKE, Inc. Class B",1,0000320187-19-000007,unlisted; priced at Class B
+320187,Class B,1258772793,2019-01-03,"NIKE, Inc. Class B",1,0000320187-19-000007,
+37996,Common,3914690010,2018-06-29,Ford Motor Co,1,0000037996-19-000012,cover page gives the count at 2018-06-29 only
+37996,Class B,70852076,2018-06-29,Ford Motor Co,1,0000037996-19-000012,unlisted; priced at Common
+1001250,Class A,218255377,2019-01-29,"Estee Lauder Cos., Inc. Class A",1,0001104659-19-005765,
+1001250,Class B,142907134,2019-01-29,"Estee Lauder Cos., Inc. Class A",1,0001104659-19-005765,unlisted; priced at Class A
+16918,Class A,166548089,2018-12-31,"Constellation Brands, Inc. Class A",1,0000016918-19-000007,
+16918,Class B,23316629,2018-12-31,"Constellation Brands, Inc. Class A",1,0000016918-19-000007,priced at Class A; Class 1 (11983 shares) ignored
+1067983,Class A,725807,2019-02-14,"Berkshire Hathaway, Inc. Class B",1500,0001193125-19-048926,one Class A share converts into 1500 Class B shares
+1067983,Class B,1372751831,2019-02-14,"Berkshire Hathaway, Inc. Class B",1,0001193125-19-048926,
+1156375,Class A,357792873,2019-02-06,"CME Group, Inc",1,0001156375-19-000010,a few thousand Class B shares ignored
+1090727,Class A,164239863,2019-02-06,"United Parcel Service, Inc. Class B",1,0001090727-19-000006,unlisted; converts 1:1 into Class B
+1090727,Class B,695989113,2019-02-06,"United Parcel Service, Inc. Class B",1,0001090727-19-000006,
+1403161,Class A,1750176642,2019-01-25,"Visa, Inc. Class A",1,0001403161-19-000005,
+1403161,Class B,245513385,2019-01-25,"Visa, Inc. Class A",1,0001403161-19-000005,counted 1:1; the Class B conversion rate is ignored (does not change the rank)
+1403161,Class C,11686801,2019-01-25,"Visa, Inc. Class A",1,0001403161-19-000005,counted 1:1; the Class C conversion rate is ignored (does not change the rank)
+1141391,Class A,1014237644,2019-02-08,"Mastercard, Inc. Class A",1,0001141391-19-000013,
+1141391,Class B,11671404,2019-02-08,"Mastercard, Inc. Class A",1,0001141391-19-000013,unlisted; priced at Class A
+1467373,Class A,637448595,2018-12-03,Accenture PLC Class A,1,0001467373-18-000424,665541059 on the cover less 28092464 held by the registrant; Class X shares carry no economic rights
+1063761,Common,308961608,2019-01-31,"Simon Property Group, Inc. REIT",1,0001558370-19-000875,8000 Class B shares ignored

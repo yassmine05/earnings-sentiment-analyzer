@@ -1,0 +1,11 @@
+ticker,date,reason,trading_days_from_nearest_event,inside_event_window_m1_p5
+DD,2019-04-02,spin-off or merger adjustment day,-21,False
+DD,2019-06-03,unverifiable jump on a corporate-action day,21,False
+EXC,2022-02-02,spin-off or merger adjustment day,62,False
+HON,2018-10-01,spin-off or merger adjustment day,-84,False
+HON,2018-10-29,spin-off or merger adjustment day,-64,False
+MMM,2024-04-01,spin-off or merger adjustment day,-21,False
+MRK,2021-06-03,spin-off or merger adjustment day,24,False
+PFE,2020-11-17,spin-off or merger adjustment day,15,False
+RTX,2020-04-03,spin-off or merger adjustment day,-23,False
+T,2022-04-11,spin-off or merger adjustment day,-7,False
