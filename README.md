@@ -1,6 +1,7 @@
 # Earnings press-release sentiment and post-earnings returns
 
-**Status: work in progress.** Stage 1 (data collection) is complete; no results yet. Every number that
+**Status: work in progress.** Stage 1 (data collection) and Stage 2 (event study) are complete; sentiment scoring
+and the sentiment-return tests are not done yet, so there are no findings to report. Every number that
 appears in this README at the end of the project will come from code in this repository that was actually run.
 
 ## Question
@@ -45,7 +46,7 @@ Copy-Item .env.example .env   # then edit .env: SEC requires your own name and c
 **Loughran-McDonald dictionary.** Download the Master Dictionary CSV yourself from the authors' page,
 <https://sraf.nd.edu/loughranmcdonald-master-dictionary/>, and place it in `data/external/`. That folder is git-ignored.
 
-## Reproducing Stage 1
+## Reproducing Stages 1 and 2
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\01a_holdings_and_issuers.py
@@ -55,12 +56,17 @@ Copy-Item .env.example .env   # then edit .env: SEC requires your own name and c
 .\.venv\Scripts\python.exe scripts\03_select_events.py
 .\.venv\Scripts\python.exe scripts\04_fetch_prices.py
 .\.venv\Scripts\python.exe scripts\05_data_quality.py
+.\.venv\Scripts\python.exe scripts\06_price_artifacts.py
+.\.venv\Scripts\python.exe scripts\07_event_study.py
+.\.venv\Scripts\python.exe scripts\08_stage2_report.py
+.\.venv\Scripts\python.exe -m pytest -q
 ```
 
 `scripts/01c_cover_page_shares.py` prints the cover-page share counts used for the hand-checked,
 multi-class firms in `data/reference/multiclass_shares.csv`.
 
-Stage reports: `docs/stage0_feasibility.md`, `docs/stage1_event_rule.md`, `docs/stage1_data_quality.md`.
+Stage reports: `docs/stage0_feasibility.md`, `docs/stage1_event_rule.md`, `docs/stage1_data_quality.md`,
+`docs/stage1_price_artifacts.md`, `docs/stage2_event_study.md`.
 
 ## Known approximations (so far)
 
@@ -70,3 +76,6 @@ Stage reports: `docs/stage0_feasibility.md`, `docs/stage1_event_rule.md`, `docs/
 - **Survivorship.** The basket is fixed from end-2018 membership, not today's index, and no selected firm had to be
   dropped for missing prices. It is still a basket of the largest firms, which all survived the sample period.
 - **Event time.** Day 0 comes from the EDGAR acceptance time of the 8-K, which can lag the newswire release.
+  Where the 10-Q/10-K reached EDGAR first and that moves day 0, the earlier time is used (flagged per event).
+  The Stage 2 timing check tests the clock against abnormal returns and volume.
+- **Spin-offs and mergers.** Yahoo approximates these as splits. Those days are removed from estimation windows.
