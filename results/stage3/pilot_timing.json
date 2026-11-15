@@ -1,0 +1,15 @@
+{
+  "sentences": 7985,
+  "seconds": 356.040962100029,
+  "padded_tokens": 321536,
+  "quant_sample": 3000,
+  "float32_seconds_sample": 133.56627630000003,
+  "int8_seconds_sample": 57.053957399970386,
+  "label_agreement": 0.8626666666666667,
+  "net_score_corr": 0.885249689132685,
+  "net_score_mean_abs_diff": 0.20915983617305756,
+  "net_score_max_abs_diff": 1.2425891160964966,
+  "torch": "2.15.0+cpu",
+  "threads": 4,
+  "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel"
+}
