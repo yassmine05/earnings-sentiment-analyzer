@@ -1,0 +1,16 @@
+group,events
+events kept in Stage 1,1316
+with market-model CARs and a full estimation window,1316
+with both sentiment scores,1316
+"missing the pre-event run-up control CAR[-20,-1]",1
+HEADLINE SAMPLE (specifications A and B),1315
+with tone surprise for both methods,1088
+SPECIFICATION C SAMPLE (tone surprise and all controls),1087
+flag: earlier Item 2.02 filing in the same quarter (pre-announcement),51
+flag: market-hours event,23
+flag: event clock moved to the 10-Q/10-K acceptance time,15
+flag: earnings release filed without Item 2.02 (hand-reviewed gap fill),3
+flag: no tone surprise,228
+firms,55
+"distinct event days (clusters by date), headline sample",505
+calendar quarters,24
