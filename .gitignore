@@ -1,6 +1,9 @@
 # Secrets
 .env
 
+# Personal Claude Code overrides (the shared .claude/settings.json is committed)
+.claude/settings.local.json
+
 # Virtual environment
 .venv/
 
