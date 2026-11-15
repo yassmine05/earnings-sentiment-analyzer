@@ -12,6 +12,9 @@ data/raw/
 data/interim/
 data/external/
 
+# Run logs
+logs/
+
 # Model caches
 .cache/
 hf_cache/
