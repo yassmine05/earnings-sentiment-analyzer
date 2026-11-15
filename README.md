@@ -1,7 +1,7 @@
 # Earnings press-release sentiment and post-earnings returns
 
-**Status: work in progress.** Stage 1 (data collection) and Stage 2 (event study) are complete; sentiment scoring
-and the sentiment-return tests are not done yet, so there are no findings to report. Every number that
+**Status: work in progress.** Stage 1 (data collection), Stage 2 (event study) and Stage 3 (sentiment scoring) are
+complete. The scores have not been joined to returns yet, so there are no findings to report. Every number that
 appears in this README at the end of the project will come from code in this repository that was actually run.
 
 ## Question
@@ -46,7 +46,7 @@ Copy-Item .env.example .env   # then edit .env: SEC requires your own name and c
 **Loughran-McDonald dictionary.** Download the Master Dictionary CSV yourself from the authors' page,
 <https://sraf.nd.edu/loughranmcdonald-master-dictionary/>, and place it in `data/external/`. That folder is git-ignored.
 
-## Reproducing Stages 1 and 2
+## Reproducing Stages 1 to 3
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\01a_holdings_and_issuers.py
@@ -59,6 +59,9 @@ Copy-Item .env.example .env   # then edit .env: SEC requires your own name and c
 .\.venv\Scripts\python.exe scripts\06_price_artifacts.py
 .\.venv\Scripts\python.exe scripts\07_event_study.py
 .\.venv\Scripts\python.exe scripts\08_stage2_report.py
+.\.venv\Scripts\python.exe scripts\09_build_sentences.py
+.\.venv\Scripts\python.exe scripts\12_score_finbert.py   # about 1.3 hours on a 4-core CPU, resumable
+.\.venv\Scripts\python.exe scripts\13_stage3_report.py
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
@@ -66,7 +69,8 @@ Copy-Item .env.example .env   # then edit .env: SEC requires your own name and c
 multi-class firms in `data/reference/multiclass_shares.csv`.
 
 Stage reports: `docs/stage0_feasibility.md`, `docs/stage1_event_rule.md`, `docs/stage1_data_quality.md`,
-`docs/stage1_price_artifacts.md`, `docs/stage2_event_study.md`.
+`docs/stage1_price_artifacts.md`, `docs/stage2_event_study.md`, `docs/stage3_scoring_spec.md` (frozen scoring rules),
+`docs/stage3_pilot_report.md`, `docs/stage3_scores_report.md`.
 
 ## Known approximations (so far)
 
