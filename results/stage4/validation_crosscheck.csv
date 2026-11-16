@@ -1,0 +1,6 @@
+implementation,coef_bp,se_bp
+"this project (stage4.estimate), with small-sample correction",57.359503557102244,20.90625947524727
+"statsmodels OLS + two-way cluster, with correction",57.35950355710121,20.90625947524714
+"this project, no small-sample correction",57.359503557102244,20.073769803905346
+"statsmodels, no small-sample correction",57.35950355710121,20.07376980390523
+"linearmodels AbsorbingLS, two-way clustered (its own correction)",57.35950355710236,20.073769803905375
