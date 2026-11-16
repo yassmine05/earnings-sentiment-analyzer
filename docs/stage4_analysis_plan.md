@@ -68,6 +68,10 @@ Drift:     CAR15[i,e] = b*Ts[i,e] + c1*RUNUP + c2*VOL + c3*AR0 + c4*SIZE[i]  + d
 drift equations, whose outcome starts on day +1, so no regressor overlaps the outcome window. The reaction
 equations contain no day-0 variable on the right-hand side.
 
+**Interpretation of the drift coefficient.** Because `AR0` is a control in the drift equations, `b` measures
+whether tone predicts CAR[+1,+5] beyond what the day-0 reaction already reflects. It is not the total
+association between tone and the post-event return.
+
 An earnings-surprise control (seasonal random-walk EPS surprise from EDGAR XBRL) is **exploratory**. It is
 added only if the EPS data can be assembled for the sample, and no headline or secondary result waits for it.
 
