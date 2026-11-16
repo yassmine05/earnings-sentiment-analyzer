@@ -1,4 +1,4 @@
-# Does the tone of earnings press releases move stock prices?
+# Is the tone of earnings press releases related to stock returns?
 
 An event study of the earnings press releases of large US companies. It asks whether the tone of the release is associated with the stock's abnormal return when the news comes out, and whether it predicts the abnormal return over the following days. Tone is measured two ways and compared: FinBERT, a finance-tuned language model, and the Loughran-McDonald finance dictionary.
 
@@ -19,6 +19,8 @@ Specification A: firm and calendar-quarter fixed effects, controls for the pre-e
 
 MDE: minimum detectable effect, the smallest effect this test would find with 80% power at the 5% level, computed from its realised standard error as SE x (1.960 + 0.842).
 
+**In plain terms.** Across 1,316 earnings releases from 55 large US companies, the tone of the release was not reliably related to how the stock moved, either on the release days or over the following five trading days. The tests could only have detected effects of roughly 44 to 71 bp per standard deviation of tone, so smaller effects cannot be ruled out. The few significant secondary and exploratory results (2 of 88 secondary coefficients, 1 of 8 quintile spreads, 1 of 24 sub-sample results) are few enough that chance alone could explain them.
+
 ![Headline coefficients](results/readme/figures/headline.png)
 
 **None of the 4 headline tests is significant after the Holm correction** (smallest Holm-adjusted p-value 0.229; smallest unadjusted p-value 0.114). No effect of tone was detected, for either measure, on either the reaction or the drift. This is not evidence that tone has no effect: effects smaller than the MDE in the table, 44 to 71 bp per standard deviation of tone, cannot be ruled out, and the 95% intervals show the range of effects that remain compatible with the data.
@@ -26,7 +28,7 @@ MDE: minimum detectable effect, the smallest effect this test would find with 80
 How to read the two families:
 
 - **Reaction (H1, H2)** asks whether tone is associated with the price move on days 0 to +1. The release and the move happen together, so this is an association, not a trading result.
-- **Drift (H3, H4)** asks whether tone predicts the return on days +1 to +5. Because the day-0 abnormal return is a control, the coefficient measures prediction beyond what the day-0 reaction already reflects. Both drift estimates are negative (-11.6 and -28.1 bp), the opposite sign to a slow reaction to good news, and neither is distinguishable from zero.
+- **Drift (H3, H4)** asks whether tone predicts the return on days +1 to +5. Because the day-0 abnormal return is a control, the coefficient measures prediction beyond what the day-0 reaction already reflects. Both drift estimates are negative (-11.6 and -28.1 bp), but both intervals include zero, so the data show no direction.
 - **FinBERT against the dictionary.** The data do not separate the two measures. With both scores in the same regression (secondary analysis S1), the test that their coefficients are equal gives p = 0.271 for the reaction and p = 0.446 for the drift. This study does not show that either method is better.
 
 ## Pre-specified secondary analyses
@@ -137,11 +139,11 @@ One release per firm and fiscal quarter: 1,316 events, 1,315 in the headline sam
 
 ## Limits
 
-- **Very large firms only.** 55 of the largest US companies. Their prices absorb news quickly, so the results may not carry over to smaller firms.
-- **Press releases, not call transcripts.** Much of the information, and the tone of management's answers, is in the earnings call, which this study does not use.
+- **Very large firms only.** 55 of the largest US companies. The results may not carry over to smaller firms.
+- **Press releases, not call transcripts.** The earnings call, including management's answers to analysts, is not used.
 - **2019 to 2024 only**, a period that includes the 2020 pandemic shock.
 - **Earnings news is not controlled for.** Neither family controls for the earnings surprise. In the reaction family a positive association could simply reflect good results being described in positive words.
-- **Power.** With 1,315 events and firm fixed effects, effects smaller than 44 to 71 bp per standard deviation of tone cannot be detected. Drift effects of a few basis points, the size often reported for large firms, are well below that.
+- **Power.** With 1,315 events and firm fixed effects, effects smaller than 44 to 71 bp per standard deviation of tone cannot be detected. Drift effects of a few basis points would be too small for this sample to detect.
 - **The two measures overlap.** FinBERT and dictionary tone correlate at 0.54 (Pearson) across releases.
 - **Event time** is the EDGAR acceptance time, which can lag the newswire release. The timing check shows that the day-0 assignment works.
 
@@ -196,6 +198,7 @@ FinBERT scoring time, measured on this project's CPU run (`results/stage3/finber
 - FinBERT (`ProsusAI/finbert`) is licensed CC BY-NC-SA 4.0 (non-commercial, share-alike).
 - The Loughran-McDonald dictionary is free for academic research; commercial use needs a licence from its authors. It is not included in this repository.
 - Prices come from Yahoo Finance through `yfinance`, for personal research use; price files are not committed.
+- The code in this repository is under the MIT licence ([LICENSE](LICENSE)). The MIT licence does not cover the third-party model, dictionary or data, which keep their own licences and terms as listed above.
 - Raw filing text, price files and the dictionary are never committed. The repository holds code, derived scores and results.
 - **Not investment advice.** Nothing here is a recommendation to buy or sell any security.
 
@@ -203,7 +206,7 @@ FinBERT scoring time, measured on this project's CPU run (`results/stage3/finber
 
 - Add the earnings-surprise control (seasonal random-walk EPS surprise from EDGAR XBRL), so that tone can be separated from the news in the numbers.
 - Score earnings-call transcripts, especially the question-and-answer section, from a source with clear redistribution rights.
-- Extend to smaller firms and a longer period: more events would lower the MDE, and smaller firms are where slow reactions are more plausible.
+- Extend to smaller firms and a longer period: more events would lower the MDE, and smaller firms would show whether the result holds outside the largest companies.
 - Use newswire timestamps to measure the reaction in intraday windows.
 - Score the outlook or guidance sections on their own, where forward-looking tone is concentrated.
 - Write and commit a new analysis plan before any of these, as was done here.

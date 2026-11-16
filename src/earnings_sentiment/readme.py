@@ -177,7 +177,7 @@ def build_readme(d: dict | None = None) -> str:
     a = L.append
 
     # ---- title and question
-    a("# Does the tone of earnings press releases move stock prices?")
+    a("# Is the tone of earnings press releases related to stock returns?")
     a("")
     a("An event study of the earnings press releases of large US companies. It asks whether the tone of the release "
       "is associated with the stock's abnormal return when the news comes out, and whether it predicts the abnormal "
@@ -210,6 +210,18 @@ def build_readme(d: dict | None = None) -> str:
     a("MDE: minimum detectable effect, the smallest effect this test would find with 80% power at the 5% level, "
       "computed from its realised standard error as SE x (1.960 + 0.842).")
     a("")
+    sec_all = pd.concat([d[k] for k in SECONDARY_FILES], ignore_index=True)
+    qs_all, sp_all = d["s5_quintile_spreads"], d["exploratory_splits"]
+    a("**In plain terms.** "
+      f"Across {n(n_events)} earnings releases from {n_firms} large US companies, the tone of the release was not "
+      "reliably related to how the stock moved, either on the release days or over the following five trading days. "
+      f"The tests could only have detected effects of roughly {h['se_bp'].apply(mde).min():.0f} to "
+      f"{h['se_bp'].apply(mde).max():.0f} bp per standard deviation of tone, so smaller effects cannot be ruled out. "
+      f"The few significant secondary and exploratory results ({int((sec_all['p'] < 0.05).sum())} of {len(sec_all)} "
+      f"secondary coefficients, {int((qs_all['p'] < 0.05).sum())} of {len(qs_all)} quintile spreads, "
+      f"{int((sp_all['p'] < 0.05).sum())} of {len(sp_all)} sub-sample results) are few enough that chance alone could "
+      "explain them.")
+    a("")
     a("![Headline coefficients](results/readme/figures/headline.png)")
     a("")
     a(("**None of the 4 headline tests is significant after the Holm correction** " if n_sig == 0 else
@@ -227,7 +239,7 @@ def build_readme(d: dict | None = None) -> str:
     a("- **Drift (H3, H4)** asks whether tone predicts the return on days +1 to +5. Because the day-0 abnormal return "
       "is a control, the coefficient measures prediction beyond what the day-0 reaction already reflects. "
       f"Both drift estimates are negative ({bp(h.loc[2, 'coef_bp'])} and {bp(h.loc[3, 'coef_bp'])} bp), "
-      "the opposite sign to a slow reaction to good news, and neither is distinguishable from zero.")
+      "but both intervals include zero, so the data show no direction.")
     s1 = d["s1_both_scores"]
     p_eq = s1.groupby("family")["p_equal_coefs"].first()
     a(f"- **FinBERT against the dictionary.** The data do not separate the two measures. With both scores in the same "
@@ -417,16 +429,16 @@ def build_readme(d: dict | None = None) -> str:
     corr = d["method_corr"].set_index("pair")
     a("## Limits")
     a("")
-    a(f"- **Very large firms only.** {n_firms} of the largest US companies. Their prices absorb news quickly, so the "
-      "results may not carry over to smaller firms.")
-    a("- **Press releases, not call transcripts.** Much of the information, and the tone of management's answers, is in "
-      "the earnings call, which this study does not use.")
+    a(f"- **Very large firms only.** {n_firms} of the largest US companies. The results may not carry over to smaller "
+      "firms.")
+    a("- **Press releases, not call transcripts.** The earnings call, including management's answers "
+      "to analysts, is not used.")
     a(f"- **{years.min()} to {years.max()} only**, a period that includes the 2020 pandemic shock.")
     a("- **Earnings news is not controlled for.** Neither family controls for the earnings surprise. In the reaction "
       "family a positive association could simply reflect good results being described in positive words.")
     a(f"- **Power.** With {n(n_head)} events and firm fixed effects, effects smaller than "
       f"{h['se_bp'].apply(mde).min():.0f} to {h['se_bp'].apply(mde).max():.0f} bp per standard deviation of tone "
-      "cannot be detected. Drift effects of a few basis points, the size often reported for large firms, are well below that.")
+      "cannot be detected. Drift effects of a few basis points would be too small for this sample to detect.")
     a(f"- **The two measures overlap.** FinBERT and dictionary tone correlate at "
       f"{corr.loc['primary scores', 'Pearson']:.2f} (Pearson) across releases.")
     a("- **Event time** is the EDGAR acceptance time, which can lag the newswire release. The timing check "
@@ -504,6 +516,8 @@ def build_readme(d: dict | None = None) -> str:
     a("- The Loughran-McDonald dictionary is free for academic research; commercial use needs a licence from its "
       "authors. It is not included in this repository.")
     a("- Prices come from Yahoo Finance through `yfinance`, for personal research use; price files are not committed.")
+    a("- The code in this repository is under the MIT licence ([LICENSE](LICENSE)). The MIT licence does not cover "
+      "the third-party model, dictionary or data, which keep their own licences and terms as listed above.")
     a("- Raw filing text, price files and the dictionary are never committed. The repository holds code, derived scores "
       "and results.")
     a("- **Not investment advice.** Nothing here is a recommendation to buy or sell any security.")
@@ -516,8 +530,8 @@ def build_readme(d: dict | None = None) -> str:
       "separated from the news in the numbers.")
     a("- Score earnings-call transcripts, especially the question-and-answer section, from a source with clear "
       "redistribution rights.")
-    a("- Extend to smaller firms and a longer period: more events would lower the MDE, and smaller firms are where "
-      "slow reactions are more plausible.")
+    a("- Extend to smaller firms and a longer period: more events would lower the MDE, and smaller firms would show "
+      "whether the result holds outside the largest companies.")
     a("- Use newswire timestamps to measure the reaction in intraday windows.")
     a("- Score the outlook or guidance sections on their own, where forward-looking tone is concentrated.")
     a("- Write and commit a new analysis plan before any of these, as was done here.")
