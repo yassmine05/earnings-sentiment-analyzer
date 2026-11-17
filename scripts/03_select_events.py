@@ -20,6 +20,13 @@ from earnings_sentiment.events import RULE_TEXT, add_flags, collect_firm_events,
 OUT = config.RESULTS / "stage1"
 # Fiscal periods whose release can fall inside the sample window.
 SAMPLE_N, SAMPLE_SEED = 20, 42
+# A snippet that contains an email address, a phone number or a "contact" heading is replaced in the report.
+CONTACT_DETAILS = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+|\(?\b\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b|\bcontacts?\s*:", re.I)
+
+
+def redact(snippet: str) -> str:
+    """Never publish individuals' names, phone numbers or email addresses from a filing's contact block."""
+    return "[contact details omitted]" if CONTACT_DETAILS.search(snippet) else snippet
 EXPECT_FROM, EXPECT_TO = "2018-09-01", "2024-11-30"
 
 
@@ -168,6 +175,7 @@ def main() -> None:
     for r in smp.itertuples():
         text = re.sub(r"\s+", " ", html_to_text(client.get_text(r.exhibit_url), drop_tables=False))
         text = re.sub(r"^EX-99\S*\s+\d+\s+\S+\s+", "", text)[:300].replace("|", "/")
+        text = redact(text)
         L.append(f"| {r.ticker} | {r.accepted_et} | {r.fiscal_period_end} | {text} |")
         sample_lines.append(f"{r.ticker:6s} {r.accepted_et}  {text}")
     L += ["", "## Dropped filings, per firm", ""]
@@ -179,7 +187,7 @@ def main() -> None:
             continue
         L += ["| accepted (ET) | fiscal period | items | prose words | reason | exhibit opens with |", "|---|---|---|---|---|---|"]
         for r in d.itertuples():
-            L.append(f"| {r.accepted_et} | {r.fiscal_period_end} | {r.items} | {int(r.words_prose)} | {r.drop_reason} | {short(r.head_text, 70)} |")
+            L.append(f"| {r.accepted_et} | {r.fiscal_period_end} | {r.items} | {int(r.words_prose)} | {r.drop_reason} | {redact(short(r.head_text, 70))} |")
         L.append("")
     (config.DOCS / "stage1_event_rule.md").write_text("\n".join(L), encoding="utf-8")
 
